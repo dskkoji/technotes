@@ -3,7 +3,7 @@ import { setCredentials } from '../../features/auth/authSlice'
 
 const baseQuery = fetchBaseQuery({
   // baseUrl: 'http://localhost:3500',
-  baseUrl: 'https://technotes-api.onrender.com',
+  baseUrl: 'https://technotes-api-5dq2.onrender.com',
   credentials: 'include',
   prepareHeaders: (headers, { getState }) => {
     const token = getState().auth.token
@@ -12,7 +12,7 @@ const baseQuery = fetchBaseQuery({
       headers.set("authorization", `Bearer ${token}`)
     }
     return headers
-  }
+   }
 })
 
 const baseQueryWithReauth = async (args, api, extraOptions) => {
